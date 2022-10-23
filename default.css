@@ -74,7 +74,7 @@ time, mark, audio, video {
     color: rgb(70, 200, 200);
 }
 
-#headerNav ul{
+#headerNav ul, #headerNav li, #headerNav a {
     margin: 0;
     padding: 0;
     border: none;
@@ -118,6 +118,8 @@ ul#topNav li a {
 ul#topNav li a:active { background-color: transparent !important; }
 ul#topNav li.current a { color: #F06000; }
 
+
+
 #about{
     margin: auto;
     text-align: center;
@@ -139,15 +141,89 @@ h1{
     color: #fff;
 }
 
-#resume{
-    display: table;
+
+
+#resume {
+    background: #fff;
+    padding-top: 90px;
+    padding-bottom: 72px;
+}
+#resume .resume-header{
     text-align: center;
-    background-color: rgb(20, 20, 20);
 }
-#resume h1,h2,p{
-    color: #fff;
+#resume h1{
+    color: rgb(0, 0, 0);
 }
-.resumecolumn{
+#resume .resume-event {
+    text-align: center;
+}
+#resume .resume-wrap {
+    display: table;
+    position: relative;
+    margin-top: 1.5rem;
+    margin-bottom: 6rem;
+    width: 94%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+#resume .resume-wrap::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 35%;
+    top: 0;
+}
+#resume .resume-block {
+    position: relative;
+    padding-top: 1.5rem;
+}
+#resume .resume-position {
+    float: left;
+    width: 35%;
+    padding-right: 90px;
+    text-align: right;
+}
+#resume .resume-position h3 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 0;
+}
+#resume .resume-position p {
+    color: #888888;
+    float: left;
+    width: 60%;
+    text-align: right;
+}
+#resume .resume-content {
+    margin-left: 35%;
+    padding-left: 90px;
+}
+#resume .resume-content h4 {
+    position: relative;
+    padding-bottom: 1.0rem;
+}
+#resume .resume-content h4::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#resume .resume-content p {
+    color: #888888;
+    max-width: 80%;
+    padding-top: 10px;
+}
+
+
+
+/* .resumecolumn{
+    padding-top: 40px;
     float: left;
     height: 800px;
 }
@@ -156,7 +232,7 @@ h1{
 }
 .right{
     width: 60%;
-}
+} */
 
 
 
@@ -176,6 +252,7 @@ h1{
     transition: 0.5s;
 }
 h3{
+    color: #fff;
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
