@@ -35,6 +35,8 @@ time, mark, audio, video {
     position: relative;
 }
 
+
+
 .name{
     width: 90%;
     color: #fff;
@@ -53,6 +55,8 @@ time, mark, audio, video {
     font-size: 20px;
     margin: 10px 0 40px;
 }
+
+
 
 .socials{
     margin: 24px 0;
@@ -74,6 +78,8 @@ time, mark, audio, video {
     color: rgb(70, 200, 200);
 }
 
+
+
 #headerNav ul, #headerNav li, #headerNav a {
     margin: 0;
     padding: 0;
@@ -93,8 +99,9 @@ time, mark, audio, video {
     border-bottom: 1px solid #fff;
     /* background-color: transparent; */
 }
-.opaque { background-color: #333; }
-
+.opaque {
+    background-color: #333;
+}
 ul#topNav {
     min-height: 48px;
     width: auto;
@@ -124,21 +131,36 @@ ul#topNav li.current a { color: #F06000; }
     margin: auto;
     text-align: center;
     padding-top: 100px;
+    padding-bottom: 100px;
     background-color: rgb(20, 20, 20);
 }
-#about p{
+#about h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+}
+.row{
+    margin-top: 5%;
+    display: inline-flex;
+    align-items: center;
+}
+.row img {
+    height: auto;
+    width: 100%;
+    max-width: 20vh;
+    border:2px solid #888888;
+    border-radius: 50%;
+    margin-left: 30%;
+}
+.profile_content{
     font-family: 'Charis SIL', serif;
     color: #777;
     font-size: 18px;
     font-weight: 300;
     line-height: 22px;
-    padding: 10px;
-}
-
-h1{
-    font-size: 36px;
-    font-weight: 600;
-    color: #fff;
+    padding-left: 30px;
+    max-width: 50%;
+    margin-right: 30%;
 }
 
 
@@ -150,6 +172,7 @@ h1{
 }
 #resume .resume-header{
     text-align: center;
+    padding-bottom: 20px;
 }
 #resume h1{
     color: rgb(0, 0, 0);
@@ -182,8 +205,8 @@ h1{
 }
 #resume .resume-position {
     float: left;
-    width: 35%;
-    padding-right: 90px;
+    /* width: 35%; */
+    padding-left: 90px;
     text-align: right;
 }
 #resume .resume-position h3 {
@@ -192,8 +215,7 @@ h1{
 }
 #resume .resume-position p {
     color: #888888;
-    float: left;
-    width: 60%;
+    /* width: 70%; */
     text-align: right;
 }
 #resume .resume-content {
@@ -222,63 +244,36 @@ h1{
 
 
 
-/* .resumecolumn{
-    padding-top: 40px;
-    float: left;
-    height: 800px;
+#projects {
+    text-align: center;
+    padding-bottom: 100px;
 }
-.left{
-    width: 40%;
+#projects .projects-header {
+    padding-bottom: 20px;
 }
-.right{
-    width: 60%;
-} */
-
-
-
-
-.row{
-    margin-top: 5%;
+#projects .projects-wrap {
     display: flex;
-    justify-content: space-between;
-}
-.about-col{
-    flex-basis: 31%;
-    background: #fff3f3;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-h3{
-    color: #fff;
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-}
-.about-col:hover{
-    box-shadow: 0 0 20px 0px rgba(247, 241, 241, 0.2);
-}
+    flex-wrap: wrap;
+    padding-left: 15%;
+    padding-right: 15%;
+    justify-content: space-evenly;
 
-.foo{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
 }
-.foo-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
+#projects .projects-col {
     position: relative;
-    overflow: hidden;
+    transition: transform .2s;
 }
-.foo-col img{
-    width: 100%;
-    display: block;
+#projects .projects-col:hover {
+    transform: scale(1.1);
 }
-.layer{
+#projects img {
+    vertical-align: middle;
+    width: 30vh;
+    height: 30vh;
+    border: 2px solid #888888;
+    border-radius: 20px;
+}
+#projects .layer {
     background: transparent;
     height: 100%;
     width: 100%;
@@ -286,11 +281,12 @@ h3{
     top: 0;
     left: 0;
     transition: 0.5s;
+    border-radius: 20px;
 }
-.layer:hover{
-    background: rgba(226, 0, 0, 0.7);
+#projects .layer:hover {
+    background: rgba(0, 130, 150, 0.8);
 }
-.layer h3{
+#projects .layer h1{
     width: 100%;
     font-weight: 500;
     color: #fff;
@@ -302,33 +298,26 @@ h3{
     opacity: 0;
     transition: 0.5s;
 }
-.layer:hover h3{
-    bottom: 49%;
+#projects .layer p{
+    width: 80%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 15px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+#projects .layer:hover h1{
+    bottom: 80%;
     opacity: 1;
 }
-.bar{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.bar-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-}
-.bar-col img{
-    width: 100%;
-    border-radius: 10px;
-}
-.bar-col p{
-    padding: 0;
-}
-.bar-col h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
+#projects .layer:hover p{
+    top: 30%;
+    opacity: 1;
 }
 
 
