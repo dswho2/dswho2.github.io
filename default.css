@@ -316,6 +316,41 @@ ul#topNav li.current a { color: #F06000; }
 }
   
 
+
+#contact .contact-header {
+    text-align: center;
+    padding: 100px;
+}
+#contact .contact-wrap {
+    margin: 24px 0;
+    padding: 0;
+    font-size: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: left;
+}
+#contact li {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 5px;
+}
+#contact li a {
+    color: #333; 
+    position: relative;
+    transition: .25s;
+}
+#contact li a:link { text-decoration: none; }
+#contact li a:visited { text-decoration: none; }
+#contact li a:hover { 
+    color: rgb(70, 200, 200);
+}
+#contact li a:active { text-decoration: none; }
+
+
+
+
+
+
 /*
 #projects .projects-wrap {
     display: flex;
@@ -385,14 +420,6 @@ ul#topNav li.current a { color: #F06000; }
     top: 30%;
     opacity: 1;
 } */
-
-
-
-
-
-
-
-
 
 
 
