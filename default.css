@@ -5,26 +5,6 @@
     font-family: 'Work Sans', sans-serif;
     /* scroll-behavior: smooth; */
 }
-/* html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   outline: 0;
-   font-size: 100%;
-   vertical-align: center;
-   background: transparent;
-} */
 
 #home{
     min-height: 100vh;
@@ -132,7 +112,7 @@ ul#topNav li.current a { color: #F06000; }
     text-align: center;
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(35, 35, 35);
 }
 #about h1 {
     font-size: 36px;
@@ -154,7 +134,7 @@ ul#topNav li.current a { color: #F06000; }
 }
 .profile_content{
     font-family: 'Charis SIL', serif;
-    color: #777;
+    color: rgb(140, 140, 140);
     font-size: 18px;
     font-weight: 300;
     line-height: 22px;
@@ -246,11 +226,96 @@ ul#topNav li.current a { color: #F06000; }
 
 #projects {
     text-align: center;
+    padding-top: 100px;
     padding-bottom: 100px;
+    background-color: rgb(35, 35, 35);
 }
 #projects .projects-header {
-    padding-bottom: 20px;
+    color: #fff;
+    padding-bottom: 50px;
 }
+#projects ul {
+    list-style: none;
+}
+#projects .projects-wrap {
+    padding: 40px 5%;
+}
+#projects .projects-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+#projects .projects-gallery > li {
+    flex-basis: auto;
+    position: relative;
+    cursor: pointer;
+    transition: transform .2s;
+    width: 300px;
+    height: 300px;
+}
+#projects .projects-gallery::after {
+    content: "";
+    flex-basis: auto;
+}
+#projects .projects-gallery li img {
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+    vertical-align: middle;
+    border-radius: 15px;
+}
+#projects .projects-gallery li:hover {
+    transform: scale(1.05);
+}
+#projects .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 130, 150, 0.8);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: 0.2s ease-in-out;
+    color: #fff;
+    border-radius: 15px;
+}
+#projects .overlay h1{
+    width: 100%;
+    font-weight: 500;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+#projects .overlay p{
+    width: 80%;
+    font-weight: 500;
+    font-size: 15px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+#projects .overlay:hover h1{
+    bottom: 80%;
+    opacity: 1;
+}
+#projects .overlay:hover p{
+    top: 30%;
+    opacity: 1;
+}
+#projects .projects-gallery li:hover .overlay {
+    transform: scale(1);
+}
+  
+
+/*
 #projects .projects-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -318,7 +383,16 @@ ul#topNav li.current a { color: #F06000; }
 #projects .layer:hover p{
     top: 30%;
     opacity: 1;
-}
+} */
+
+
+
+
+
+
+
+
+
 
 
 /* 
