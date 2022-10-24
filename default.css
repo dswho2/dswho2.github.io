@@ -279,8 +279,9 @@ ul#topNav li.current a { color: #F06000; }
     transition: 0.2s ease-in-out;
     color: #fff;
     border-radius: 15px;
+    /* opacity: 0; */
 }
-#projects .overlay h1{
+#projects .projects-gallery h1{
     width: 100%;
     font-weight: 500;
     font-size: 26px;
@@ -291,7 +292,7 @@ ul#topNav li.current a { color: #F06000; }
     opacity: 0;
     transition: 0.5s;
 }
-#projects .overlay p{
+#projects .projects-gallery p{
     width: 80%;
     font-weight: 500;
     font-size: 15px;
@@ -302,11 +303,11 @@ ul#topNav li.current a { color: #F06000; }
     opacity: 0;
     transition: 0.5s;
 }
-#projects .overlay:hover h1{
+#projects .projects-gallery li:hover h1{
     bottom: 80%;
     opacity: 1;
 }
-#projects .overlay:hover p{
+#projects .projects-gallery li:hover p{
     top: 30%;
     opacity: 1;
 }
