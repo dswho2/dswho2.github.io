@@ -377,20 +377,22 @@ ul#topNav li.current a { color: #F06000; }
 }
 #contact .contact-wrap {
     font-size: 20px;
-    margin: 24px 0;
+    margin-top: 24px;
     padding: 0;
     margin-left: 15%;
     margin-right: 15%;
+    list-style: none;
+    display: inline-block;
     text-align: left;
 }
-@media (max-width:600px) {
+@media (max-width:850px) {
     #contact .contact-wrap {
+        margin-left: 0%;
         font-size: 12px;
     }
 }
 #contact li {
-    display: inline-block;
-    margin: 0 15px;
+    /* margin: 0 15px; */
     padding: 5px;
 }
 #contact li a {
