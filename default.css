@@ -387,6 +387,7 @@ ul#topNav li.current a { color: #F06000; }
 }
 @media (max-width:850px) {
     #contact .contact-wrap {
+        margin-left: 10%;
         font-size: 12px;
     }
 }
