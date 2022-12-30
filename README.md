@@ -1,8 +1,5 @@
 # Personal Website
 
-Personal Website created utilizing JavaScript, CSS, and HTML
+This is a personal website created using HTML, CSS, and JavaScript.
 
-index.html for main file to run for website
-or, alternatively, use https://dswho2.github.io
-
-**still in development**
+To view the website, simply open the index.html file or visit https://dswho2.github.io in a web browser.
