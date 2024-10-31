@@ -1,0 +1,42 @@
+/* src/components/Navbar/Navbar.module.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  position: relative; /* Set position to relative for the ::after pseudo-element */
+  overflow: hidden; /* Ensure no overflow for the underline effect */
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0; /* Position the underline at the bottom */
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: #ff5733; /* Color of the underline */
+  transform: translateX(-50%) scaleX(0); /* Start with scaleX(0) and center it */
+  transition: transform 0.3s ease; /* Animation for the underline */
+}
+
+.navLink:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Expand the underline to full width */
+}
+
+.navLink:hover {
+  color: #ff5733; /* Change color on hover */
+  transition: color 0.3s; /* Add transition for color change */
+}

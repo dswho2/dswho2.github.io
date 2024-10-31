@@ -1,22 +1,29 @@
+// src/App.tsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Navbar from './components/Navbar/Navbar';
+import TitleCard from './components/TitleCard/TitleCard';
+import About from './pages/About/About';  // Import About
+import Projects from './pages/Projects/Projects';  // Import Projects
+import Contact from './pages/Contact/Contact';  // Import Contact
+import './App.css';
 
-const App: React.FC = () => {
+const App = () => {
   return (
-    <Router>
+    <div>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+      <section id="home">
+        <TitleCard />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
+    </div>
   );
 };
 
