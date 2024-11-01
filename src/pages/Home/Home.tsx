@@ -1,27 +1,12 @@
 // src/pages/Home/Home.tsx
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar';
 import TitleCard from '../../components/TitleCard/TitleCard';
-import About from '../About/About';
-import Projects from '../Projects/Projects';
-import Contact from '../Contact/Contact';
-import styles from './Home.module.css';
 
 const Home = () => {
   return (
-    <div className={styles.home}>
-      <Navbar />
-      <section id="home" className={styles.section}>
+    <div className="flex flex-col w-full min-h-screen overflow-x-hidden">
+      <section id="home" className="w-full min-h-screen flex justify-center items-center scroll-mt-16">
         <TitleCard />
-      </section>
-      <section id="about" className={styles.section}>
-        <About />
-      </section>
-      <section id="projects" className={styles.section}>
-        <Projects />
-      </section>
-      <section id="contact" className={styles.section}>
-        <Contact />
       </section>
     </div>
   );

@@ -1,6 +1,6 @@
 // src/components/TitleCard/TitleCard.tsx
 import React, { useRef } from 'react';
-import styles from './TitleCard.module.css';
+import titleBackground from '../../images/title_background.png'; // Adjust path accordingly
 
 const TitleCard = () => {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -22,13 +22,18 @@ const TitleCard = () => {
   };
 
   return (
-    <div className={styles.heroContainer}>
-      <div className={styles.textContent}>
-        <h1 className={styles.name}>David Ho</h1>
-        <p className={styles.subtitle}>professional pooper</p>
+    <div className="flex items-center justify-center w-full h-screen px-12 bg-gradient-to-tr from-[#071b31] to-[#0b4481] gap-8">
+      <div className="flex flex-col items-start justify-center flex-[0_1_35%]"> {/* Adjusted flex-basis to 35% */}
+        <h1 className="text-white text-[clamp(2.5rem,5vw,4.5rem)] leading-tight font-bold mb-4">
+          David Ho
+        </h1>
+        <p className="text-[#a5b9d4] text-[clamp(1rem,1.5vw,1.5rem)] mb-8">
+          professional pooper
+        </p>
       </div>
       <div
-        className={styles.imageCard}
+        className="flex-[0_1_30%] max-w-[300px] aspect-square bg-cover bg-center rounded-2xl shadow-lg transition-transform duration-100"
+        style={{ backgroundImage: `url(${titleBackground})` }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         ref={cardRef}
