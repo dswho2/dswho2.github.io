@@ -66,13 +66,13 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
           <span
             className={`h-px transition-all duration-300 ${
               hoveredItem === item || activeSection === item.toLowerCase()
-                ? 'w-16 bg-[#ff5733]'
-                : 'w-8 bg-white'
+                ? 'w-16 bg-[#1ABC9C]'
+                : 'w-8 bg-gray-400'
             }`}
           />
           <span
             className={`text-lg ${
-              activeSection === item.toLowerCase() ? 'text-[#ff5733]' : ''
+              activeSection === item.toLowerCase() ? 'text-[#1ABC9C]' : ''
             }`}
           >
             {item}

@@ -19,10 +19,10 @@ const Contact = () => {
         {socialLinks.map(({ name, icon: Icon, url }) => (
           <a
             key={name}
-            href={url}
+            href={url}  
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-teal-500 transition-all"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-teal-600 transition-all"
             aria-label={name}
           >
             <Icon size={20} className="text-white" />
