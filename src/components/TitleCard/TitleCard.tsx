@@ -39,12 +39,6 @@ const TitleCard: React.FC = () => {
   return (
     <div className="flex items-center justify-center w-full h-screen px-12 bg-gradient-to-tr from-[#031221] to-[#19395c] gap-8">
       <div className="flex flex-col items-start justify-center flex-[0_1_35%]">
-        <h1 className="text-white text-[clamp(2.5rem,5vw,4.5rem)] leading-tight font-bold mb-4">
-          David Ho
-        </h1>
-        <p className="text-[#a5b9d4] text-[clamp(1rem,1.5vw,1.5rem)] mb-8">
-          professional pooper
-        </p>
       </div>
       <div
         className="flex-[0_1_30%] max-w-[300px] aspect-square bg-cover bg-center rounded-2xl shadow-lg transition-transform duration-300"

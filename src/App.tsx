@@ -1,31 +1,52 @@
-// src/App.tsx
-import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import TitleCard from './components/TitleCard/TitleCard';
-import About from './pages/About/About';  // Import About
-import Projects from './pages/Projects/Projects';  // Import Projects
-import Contact from './pages/Contact/Contact';  // Import Contact
-import './App.css';
+import React, { useRef } from 'react';
+import Navbar from './components/navBar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Experience from './pages/Experience';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 const App = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
   return (
-    <div>
-      <Navbar />
-      <section id="home">
-        <TitleCard />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
+    <div className="h-screen w-screen bg-gradient-to-tr from-[#031221] to-[#19395c] overflow-hidden">
+      {/* Main scrollable container */}
+      <div ref={scrollContainerRef} className="flex h-full w-full overflow-y-auto">
+        
+        {/* Left side with sticky positioning */}
+        <div className="w-[50%] sticky top-0 h-screen flex items-center justify-center px-10 text-white">
+          <div>
+            <h1 className="text-5xl font-bold mb-4">David Ho</h1>
+            <p className="text-xl text-gray-300 mb-16">Software Engineer</p>
+            
+            {/* Pass scrollContainerRef to Navbar */}
+            <Navbar scrollContainerRef={scrollContainerRef} />
+
+          </div>
+        </div>
+
+        {/* Right side scrollable content */}
+        <div className="w-[50%] px-16 space-y-10">
+          <section id="home" className="h-screen flex items-center">
+            <Home />
+          </section>
+          <section id="about" className="flex items-center py-10">
+            <About />
+          </section>
+          <section id="experience" className="flex items-center py-10">
+            <Experience />
+          </section>
+          <section id="projects" className="flex items-center py-10">
+            <Projects />
+          </section>
+          <section id="contact" className="h-screen flex items-center pb-10">
+            <Contact />
+          </section>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default App;
-
