@@ -44,7 +44,7 @@ const Projects = () => {
       image: chatbot_image
     },
     {
-      title: "Chatbot using OpenAI's GPT-4 API",
+      title: "Ising Model",
       description: `
       A Python simulation of the Ising Model using the Monte Carlo method (Metropolis-Hastings algorithm). Developed in Google Colab for interactive execution, with visualizations generated using Matplotlib and animations created with imageio.
       `,

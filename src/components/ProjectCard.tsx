@@ -1,4 +1,3 @@
-// src/components/ProjectCard.tsx
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -31,18 +30,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       onMouseEnter={onHover}
       onMouseLeave={onHoverLeave}
     >
-      <div className="flex gap-4">
+      <div className="flex flex-col sm:flex-row gap-4">
         {/* Left side - Image */}
         {image && (
-          <div className="w-32 flex-shrink-0">
+          <div className="w-full sm:w-32 sm:flex-shrink-0 mb-4 sm:mb-0">
             <img 
               src={image} 
               alt={`${title} thumbnail`} 
-              className="w-full h-20 object-cover rounded-md"
+              className="w-full h-auto sm:h-20 object-cover rounded-md" 
+              style={{ aspectRatio: '1.6 / 1' }} // Maintain aspect ratio of 1.6:1
             />
           </div>
         )}
-        
+
         {/* Right side - Content */}
         <div className="flex-1">
           {/* Title and Arrow */}

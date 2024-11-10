@@ -12,22 +12,21 @@ const App = () => {
   return (
     <div className="h-screen w-screen bg-gradient-to-tr from-[#031221] to-[#19395c] overflow-hidden">
       {/* Main scrollable container */}
-      <div ref={scrollContainerRef} className="flex h-full w-full overflow-y-auto">
+      <div ref={scrollContainerRef} className="flex flex-col lg:flex-row h-full w-full overflow-y-auto">
         
-        {/* Left side with sticky positioning */}
-        <div className="w-[50%] sticky top-0 h-screen flex items-center justify-center px-10 text-white">
-          <div>
+        {/* Left side with conditional sticky positioning */}
+        <div className="w-full lg:w-[50%] lg:sticky top-0 h-screen flex items-center justify-center px-10 text-white">
+          <div className="pt-10 lg:pt-0"> {/* Add padding above name for small screens */}
             <h1 className="text-5xl font-bold mb-4">David Ho</h1>
             <p className="text-xl text-gray-300 mb-16">Software Engineer</p>
             
             {/* Pass scrollContainerRef to Navbar */}
             <Navbar scrollContainerRef={scrollContainerRef} />
-
           </div>
         </div>
 
         {/* Right side scrollable content */}
-        <div className="w-[50%] px-16 space-y-10">
+        <div className="w-full lg:w-[50%] px-6 lg:px-16 space-y-10">
           <section id="home" className="h-screen flex items-center">
             <Home />
           </section>
