@@ -15,7 +15,7 @@ const App = () => {
       <div ref={scrollContainerRef} className="flex flex-col lg:flex-row h-full w-full overflow-y-auto">
         
         {/* Left side with conditional sticky positioning */}
-        <div className="w-full lg:w-[50%] lg:sticky top-0 h-screen flex items-center justify-center px-10 text-white">
+        <div className="w-full lg:w-[50%] lg:sticky top-0 h-screen flex items-center justify-center px-10 text-white relative">
           <div className="pt-10 lg:pt-0"> {/* Add padding above name for small screens */}
             <h1 className="text-5xl font-bold mb-4">David Ho</h1>
             <p className="text-xl text-gray-300 mb-16">Software Engineer</p>

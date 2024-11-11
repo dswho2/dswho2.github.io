@@ -1,6 +1,6 @@
 // src/components/navBar.tsx
 import React, { useState, useEffect, RefObject } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react'; //-------------
 
 interface NavbarProps {
   scrollContainerRef: RefObject<HTMLDivElement>;
@@ -9,7 +9,7 @@ interface NavbarProps {
 const Navbar = ({ scrollContainerRef }: NavbarProps) => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [activeSection, setActiveSection] = useState<string>('home');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); //-----------
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -42,6 +42,7 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
     };
   }, [scrollContainerRef]);
  
+  // -------------
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -49,6 +50,7 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
       document.body.style.overflow = 'unset';
     }
   }, [isMenuOpen]);
+  // -------------
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -58,40 +60,46 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
         top: topPos,
         behavior: 'smooth'
       });
-      setIsMenuOpen(false);
+      setIsMenuOpen(false);  // ---------
     }
   };
+
+  // ------------
+  const NavLinks = () => (
+    <div className="flex flex-col gap-6">
+      {['Home', 'About', 'Experience', 'Projects', 'Contact'].map((item) => (
+        <button
+          key={item}
+          onClick={() => scrollToSection(item.toLowerCase())}
+          onMouseEnter={() => setHoveredItem(item)}
+          onMouseLeave={() => setHoveredItem(null)}
+          className="text-left flex items-center gap-3 text-gray-300 hover:text-white transition-colors duration-500"
+        >
+          <span
+            className={`h-px transition-all duration-500 ease-in-out ${
+              hoveredItem === item || activeSection === item.toLowerCase()
+                ? 'w-16 bg-[#1ABC9C]'
+                : 'w-8 bg-gray-400'
+            }`}
+          />
+          <span
+            className={`text-lg transition-colors duration-500 ${
+              activeSection === item.toLowerCase() ? 'text-[#1ABC9C]' : ''
+            }`}
+          >
+            {item}
+          </span>
+        </button>
+      ))}
+    </div>
+  );
+  // ----------
 
   return (
     <>
       {/* Desktop Navigation */}
       <nav className="hidden lg:block">
-        <div className="flex flex-col gap-6">
-          {['Home', 'About', 'Experience', 'Projects', 'Contact'].map((item) => (
-            <button
-              key={item}
-              onClick={() => scrollToSection(item.toLowerCase())}
-              onMouseEnter={() => setHoveredItem(item)}
-              onMouseLeave={() => setHoveredItem(null)}
-              className="text-left flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
-            >
-              <span
-                className={`h-px transition-all duration-300 ${
-                  hoveredItem === item || activeSection === item.toLowerCase()
-                    ? 'w-16 bg-[#1ABC9C]'
-                    : 'w-8 bg-gray-400'
-                }`}
-              />
-              <span
-                className={`text-lg ${
-                  activeSection === item.toLowerCase() ? 'text-[#1ABC9C]' : ''
-                }`}
-              >
-                {item}
-              </span>
-            </button>
-          ))}
-        </div>
+        <NavLinks />
       </nav>
 
       {/* Mobile Menu Button */}
@@ -129,32 +137,7 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
           }`}
         >
           <div className="pt-20 px-6">
-            <nav className="flex flex-col gap-6">
-              {['Home', 'About', 'Experience', 'Projects', 'Contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  onMouseEnter={() => setHoveredItem(item)}
-                  onMouseLeave={() => setHoveredItem(null)}
-                  className="text-left flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
-                >
-                  <span
-                    className={`h-px transition-all duration-300 ${
-                      hoveredItem === item || activeSection === item.toLowerCase()
-                        ? 'w-16 bg-[#1ABC9C]'
-                        : 'w-8 bg-gray-400'
-                    }`}
-                  />
-                  <span
-                    className={`text-lg ${
-                      activeSection === item.toLowerCase() ? 'text-[#1ABC9C]' : ''
-                    }`}
-                  >
-                    {item}
-                  </span>
-                </button>
-              ))}
-            </nav>
+            <NavLinks />
           </div>
         </div>
       </div>
@@ -163,3 +146,5 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
 };
 
 export default Navbar;
+
+
