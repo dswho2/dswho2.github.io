@@ -1,4 +1,3 @@
-// src/components/navBar.tsx
 import React, { useState, useEffect, RefObject } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -10,6 +9,7 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [activeSection, setActiveSection] = useState<string>('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBlurred, setIsBlurred] = useState(false);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -50,6 +50,20 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
     }
   }, [isMenuOpen]);
 
+  const handleMenuToggle = () => {
+    if (!isMenuOpen) {
+      // When opening, set blur immediately
+      setIsBlurred(true);
+      // Then open menu
+      setTimeout(() => setIsMenuOpen(true), 50);
+    } else {
+      // When closing, close menu first
+      setIsMenuOpen(false);
+      // Remove blur after menu closes
+      setTimeout(() => setIsBlurred(false), 500);
+    }
+  };
+
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section && scrollContainerRef.current) {
@@ -58,7 +72,7 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
         top: topPos,
         behavior: 'smooth'
       });
-      setIsMenuOpen(false);
+      handleMenuToggle(); // Use the new toggle function instead
     }
   };
 
@@ -96,7 +110,7 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
 
       {/* Mobile Menu Button */}
       <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        onClick={handleMenuToggle}
         className="lg:hidden fixed top-6 right-6 z-50 p-2 rounded-full bg-gray-800/50 backdrop-blur-sm hover:bg-gray-700/50 transition-all duration-300"
       >
         <div className="relative w-6 h-6">
@@ -111,22 +125,22 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`lg:hidden fixed inset-0 z-40 transition-all duration-500 ease-in-out ${
-          isMenuOpen 
-            ? 'opacity-100 pointer-events-auto' 
-            : 'opacity-0 pointer-events-none'
+        className={`lg:hidden fixed inset-0 z-40 ${
+          isBlurred || isMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'
         }`}
       >
-        {/* Backdrop */}
-        <div className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-500 ${
-          isMenuOpen ? 'opacity-100' : 'opacity-0'
-        }`} />
+        {/* Backdrop with separate transitions for blur and opacity */}
+        <div 
+          className={`absolute inset-0 bg-black/60 transition-[opacity] duration-300 
+            ${isBlurred ? 'backdrop-blur-sm' : 'backdrop-blur-none'}
+            ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`} 
+        />
 
         {/* Menu Panel */}
         <div 
-          className={`absolute right-0 top-0 h-full w-64 bg-gray-900/95 backdrop-blur-md transform transition-transform duration-500 ease-in-out ${
-            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
+          className={`absolute right-0 top-0 h-full w-64 bg-gray-900/95 backdrop-blur-md transform 
+            transition-transform duration-500 ease-in-out
+            ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
         >
           <div className="pt-20 px-6">
             <nav className="flex flex-col gap-6">
