@@ -22,9 +22,9 @@ const Projects = () => {
     },
     {
       title: "Portfolio Website",
-      description: "A personal portfolio built using React, TypeScript, and Tailwind CSS to highlight my projects, skills, and experience. Hosted on GitHub Pages for seamless access.",
+      description: "A responsive personal website built with React, TypeScript, and Tailwind CSS, showcasing projects, skills, and experience. Deployed on GitHub Pages with Node.js used for build automation.",
       github: "https://github.com/dswho2/dswho2.github.io",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "NodeJS", "GitHub Pages"],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "GitHub Pages", "Node.js"],
       image: personal_website
     },
     {
