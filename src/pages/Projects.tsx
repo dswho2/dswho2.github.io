@@ -4,9 +4,10 @@ import ProjectCard from '../components/ProjectCard';
 
 import DR_image from '../images/DR_model.jpg';
 import personal_website from '../images/personal_website.png';
-import chatbot_image from '../images/chatbot.png'
-import ising_image from '../images/ising.jpg'
-import microwaved_eggs from '../images/microwaved_eggs.png'
+import chatbot_image from '../images/chatbot.png';
+import ising_image from '../images/ising.jpg';
+import microwaved_eggs from '../images/microwaved_eggs.png';
+import website_v1 from '../images/website_v1.png';
 
 const Projects = () => {
   // Project data with title, description, star count, and technologies used
@@ -51,6 +52,13 @@ const Projects = () => {
       github: "https://github.com/dswho2/Ising-Model",
       technologies: ["Python", "NumPy", "Google Colab"],
       image: ising_image
+    }, 
+    {
+      title: "Personal Website v1",
+      description: "An older version of my personal portfolio website built with HTML, CSS, and JavaScript, featuring smooth scrolling, an interactive title card, and responsive design. This was previously hosted with Github Pages, although no longer in use.",
+      github: "https://github.com/dswho2/website_v1",
+      technologies: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+      image: website_v1
     }
     // Add more projects
   ];
