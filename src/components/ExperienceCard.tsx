@@ -1,12 +1,10 @@
 // src/components/ExperienceCard.tsx
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
 
 interface ExperienceCardProps {
   dateRange: string;
   title: string;
   company: string;
-  positions?: string[];
   description: string;
   skills?: string[];
   isDimmed: boolean;
@@ -18,7 +16,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   dateRange,
   title,
   company,
-  positions = [],
   description,
   skills = [],
   isDimmed,
@@ -33,16 +30,12 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     >
       <div className="flex justify-between items-start mb-2">
         <span className="text-gray-400 text-sm">{dateRange}</span>
-        <div className="flex items-center gap-1 text-teal-400 cursor-pointer">
-          <span className="text-sm hover:underline">{company}</span>
-          <ArrowUpRight size={16} />
+        <div className="flex items-center gap-1 text-teal-400">
+          <span className="text-md">{company}</span>
         </div>
       </div>
       
       <h3 className="text-white text-lg font-semibold mb-1">{title}</h3>
-      {positions.map((position, index) => (
-        <div key={index} className="text-gray-400 mb-1">{position}</div>
-      ))}
       
       <div className="text-gray-300 mb-4 text-sm leading-relaxed">
         {description.split('\n').map((line, index) => (

@@ -6,11 +6,8 @@ const About = () => {
   return (
     <div className="max-w-lg">
       <h2 className="text-3xl font-semibold text-white mb-6">About Me</h2>
-      <p className='text-gray-300'>I studied computational physics with a minor in computer science at UIUC.<br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <p className='text-gray-300'>
+Hi! I’m a software engineer with a background in computational physics and computer science from the University of Illinois at Urbana-Champaign (UIUC). I specialize in machine learning, web development, and building practical solutions to complex problems. I’m passionate about exploring new technologies and continuously expanding my skill set. Feel free to browse this website to learn more about my work, experiences, and projects.
       </p>
     </div>
   );
