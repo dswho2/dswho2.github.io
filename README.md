@@ -6,6 +6,8 @@ A personal portfolio built using **React**, **TypeScript**, and **Tailwind CSS**
 
 This portfolio website showcases my skills, projects, and experience as a software engineer. It is a single-page application built with React and TypeScript, styled using Tailwind CSS for a responsive and modern design. The site is deployed on GitHub Pages, making it easily accessible from anywhere.
 
+![Website image](https://github.com/dswho2/dswho2.github.io/blob/main/src/images/personal_website.png)
+
 ## Technologies Used
 
 - **React**: For building a dynamic, component-based user interface.
