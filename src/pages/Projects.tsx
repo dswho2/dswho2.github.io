@@ -18,7 +18,7 @@ const Projects = () => {
         A machine learning pipeline developed in Python to predict diabetic retinopathy severity from 35,000+ retinal images using k-means clustering and pretrained CNN models with TensorFlow. Optimized performance with cuDNN 8.1 for faster training and data processing.
       `,
       github: "https://github.com/dswho2/DR-model",
-      technologies: ["Python", "Machine Learning", "Jupyter Notebook", "TensorFlow"],
+      technologies: ["Python", "Jupyter Notebook", "TensorFlow"],
       image: DR_image
     },
     {
