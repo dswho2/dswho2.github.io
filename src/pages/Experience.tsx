@@ -8,8 +8,8 @@ const Experience = () => {
       dateRange: "Jun. 2024 — PRESENT",
       title: "R&D Software Engineer",
       company: "Holor Technology, Inc.",
-      description: "Developed testing frameworks for chip design simulation software in C++ and Python, ensuring resistance extraction accuracy within a 5% margin of error. Designed and implemented a novel numerical method for electromagnetic simulation using the velocity gauge, improving accuracy and efficiency in simulation tools. First author of 'Numerical Methods for Electromagnetic Simulation using Velocity Gauge,' submitted to the 62nd DAC.",
-      skills: ["Python", "C++", "LaTeX", "Design Force CR-8000"]
+      description: "Developed a Python-based testing framework for electromagnetic simulation software in C++ and Python, automating validation and ensuring accuracy within a 5% margin of error while reducing benchmark time by 15%. Integrated command-line automation for running benchmarks with various configurations, utilized Pandas for log analysis, and used pytest to organize and automate test cases. Designed a novel electromagnetic simulation method using the velocity gauge, optimizing runtime and accuracy. First author of 'Numerical Methods for Electromagnetic Simulation using Velocity Gauge', submitted to the 62nd DAC.",
+      skills: ["Python", "pandas", "pytest", "C++", "LaTeX", "Design Force CR-8000"]
     },
     {
       dateRange: "Jun. 2023 — Aug. 2023",
