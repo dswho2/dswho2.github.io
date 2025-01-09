@@ -8,6 +8,7 @@ import chatbot_image from '../images/chatbot.png';
 import ising_image from '../images/ising.jpg';
 import microwaved_eggs from '../images/microwaved_eggs.png';
 import website_v1 from '../images/website_v1.png';
+import sudoku_webapp from '../images/sudoku-webapp-thumbnail.png';
 
 const Projects = () => {
   // Project data with title, description, star count, and technologies used
@@ -29,9 +30,18 @@ const Projects = () => {
       image: personal_website
     },
     {
+      title: "Sudoku Web App",
+      description: `
+        A Sudoku game built with React, TypeScript, and Tailwind CSS for the frontend, featuring an interactive game board, keyboard and mouse input support, and a sleek UI. The Flask backend handles user authentication, allowing users to log in, save progress, and track stats such as puzzles solved and best times. User data and game statistics are stored using Vercel's PostgreSQL storage, ensuring persistence and scalability. The frontend and backend are both deployed using Vercel for seamless integration.
+      `,
+      github: "https://github.com/dswho2/sudoku-webapp",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Flask", "PostgreSQL", "Vercel"],
+      image: sudoku_webapp
+    },
+    {
       title: "ME-System Discord Bot",
       description: `
-      A Discord bot built with discord.py that allows users to track meals by submitting photos for rewards. Features casino games (Blackjack, Slots, High Low) and a gacha system for Discord roles. MySQL and SQLAlchemy were used for database management, with Alembic for migrations.
+        A Discord bot built with discord.py that allows users to track meals by submitting photos for rewards. Features casino games (Blackjack, Slots, High Low) and a gacha system for Discord roles. MySQL and SQLAlchemy were used for database management, with Alembic for migrations.
       `,
       github: "https://github.com/maldybois/microwaved-eggs",
       technologies: ["Python", "MySQL", "SQLAlchemy", "discord.py", "Alembic"],
