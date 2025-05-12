@@ -30,12 +30,12 @@ const Projects = () => {
       image: personal_website
     },
     {
-      title: "Sudoku Web App",
+      title: "Sudoku Web App with AI Hints",
       description: `
-        A Sudoku game built with React, TypeScript, and Tailwind CSS for the frontend, featuring an interactive game board, keyboard and mouse input support, and a sleek UI. The Flask backend handles user authentication, allowing users to log in, save progress, and track stats such as puzzles solved and best times. User data and game statistics are stored using Vercel's PostgreSQL storage, ensuring persistence and scalability. The frontend and backend are both deployed using Vercel for seamless integration.
+        A Sudoku game built with React, TypeScript, and Tailwind CSS for the frontend, featuring an interactive game board, keyboard and mouse input support, and a sleek UI. The Flask backend handles user authentication, allowing users to log in, save progress, and track stats such as puzzles solved, best times, and average times. Integrated OpenAI’s GPT API to generate intelligent hint suggestions during gameplay. User data and game statistics are stored using Vercel's PostgreSQL storage, ensuring persistence and scalability. The frontend and backend are both deployed using Vercel for seamless integration.
       `,
       github: "https://github.com/dswho2/sudoku-webapp",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Flask", "PostgreSQL", "Vercel"],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "OpenAI GPT API", "Flask", "PostgreSQL", "Vercel"],
       image: sudoku_webapp
     },
     {
@@ -51,7 +51,7 @@ const Projects = () => {
       title: "Chatbot using OpenAI's GPT-4 API",
       description: "A terminal-based chatbot built with Node.js that integrates with OpenAI's GPT-4 API for generating responses. It uses the readline-sync package to capture user input via the command line, sends queries to the GPT-4 model, and displays the generated responses in real time.",
       github: "https://github.com/dswho2/Chatbot",
-      technologies: ["Node.js", "OpenAI GPT-4 API", "JavaScript"],
+      technologies: ["Node.js", "OpenAI GPT API", "JavaScript"],
       image: chatbot_image
     },
     {
