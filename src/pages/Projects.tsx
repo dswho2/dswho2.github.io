@@ -9,6 +9,7 @@ import ising_image from '../images/ising.jpg';
 import microwaved_eggs from '../images/microwaved_eggs.png';
 import website_v1 from '../images/website_v1.png';
 import sudoku_webapp from '../images/sudoku-webapp-thumbnail.png';
+import ai_todo_list from '../images/AITodoList.png';
 
 const Projects = () => {
   // Project data with title, description, star count, and technologies used
@@ -23,20 +24,29 @@ const Projects = () => {
       image: DR_image
     },
     {
-      title: "Portfolio Website",
-      description: "A responsive personal website built with React, TypeScript, and Tailwind CSS, showcasing projects, skills, and experience. Deployed on GitHub Pages with Node.js used for build automation.",
-      github: "https://github.com/dswho2/dswho2.github.io",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "GitHub Pages", "Node.js"],
-      image: personal_website
-    },
-    {
       title: "Sudoku Web App with AI Hints",
       description: `
         A Sudoku game built with React, TypeScript, and Tailwind CSS for the frontend, featuring an interactive game board, keyboard and mouse input support, and a sleek UI. The Flask backend handles user authentication, allowing users to log in, save progress, and track stats such as puzzles solved, best times, and average times. Integrated OpenAI’s GPT API to generate intelligent hint suggestions during gameplay. User data and game statistics are stored using Vercel's PostgreSQL storage, ensuring persistence and scalability. The frontend and backend are both deployed using Vercel for seamless integration.
       `,
       github: "https://github.com/dswho2/sudoku-webapp",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "OpenAI GPT API", "Flask", "PostgreSQL", "Vercel"],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "OpenAI GPT API", "Flask", "Vite", "PostgreSQL", "Vercel"],
       image: sudoku_webapp
+    },
+    {
+      title: "AI-Powered Todo List",
+      description: `
+        A full-stack AI-enhanced Todo app that lets users add, complete, and delete tasks, as well as generate new ones using OpenAI's GPT model, streamed to the user in real-time. Built with React, Tailwind, FastAPI, and Strawberry GraphQL. The backend uses SQLModel with SQLite, and the frontend integrates Apollo Client for GraphQL queries.
+      `,
+      github: "https://github.com/dswho2/AITodoList",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "OpenAI GPT API", "FastAPI", "GraphQL", "Vite", "Apollo Client"],
+      image: ai_todo_list
+    },
+    {
+      title: "Portfolio Website",
+      description: "A responsive personal website built with React, TypeScript, and Tailwind CSS, showcasing projects, skills, and experience. Deployed on GitHub Pages with Node.js used for build automation.",
+      github: "https://github.com/dswho2/dswho2.github.io",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "GitHub Pages", "Node.js"],
+      image: personal_website
     },
     {
       title: "ME-System Discord Bot",
