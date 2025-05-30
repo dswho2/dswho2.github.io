@@ -6,6 +6,8 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
+import { MapPin } from 'lucide-react';
+
 const App = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -18,7 +20,13 @@ const App = () => {
         <div className="w-full lg:w-[50%] lg:sticky top-0 h-screen flex items-center justify-center px-10 text-white relative">
           <div className="pt-10 lg:pt-0"> {/* Add padding above name for small screens */}
             <h1 className="text-5xl font-bold mb-4">David Ho</h1>
-            <p className="text-xl text-gray-300 mb-16">Software Engineer</p>
+            <div className="mb-10 leading-tight">
+              <p className="text-xl text-gray-300 m-0 p-0">Software Engineer</p>
+              <div className="flex items-center text-sm text-gray-400 mt-1">
+                <MapPin className="w-4 h-4 mr-1 text-gray-400" />
+                <span>Palo Alto, CA</span>
+              </div>
+            </div>
             
             {/* Pass scrollContainerRef to Navbar */}
             <Navbar scrollContainerRef={scrollContainerRef} />
