@@ -10,10 +10,20 @@ import microwaved_eggs from '../images/microwaved_eggs.png';
 import website_v1 from '../images/website_v1.png';
 import sudoku_webapp from '../images/sudoku-webapp-thumbnail.png';
 import ai_todo_list from '../images/AITodoList.png';
+import rag_recipe_finder from '../images/RAG_Recipe_Finder.png';
 
 const Projects = () => {
   // Project data with title, description, star count, and technologies used
   const projects = [
+    {
+      title: "RAG-Based Recipe Generator",
+      description: `
+        A full-stack recipe suggestion web app powered by Retrieval-Augmented Generation (RAG). Users input ingredients they have at home, and the system semantically searches a 50K+ recipe dataset to return relevant, plausible recipes — even when there's no exact ingredient match. Built with OpenAI embeddings, Pinecone for vector search, and LangChain for context injection and prompt orchestration. The React + TypeScript frontend is deployed via AWS S3 + CloudFront, while the backend runs serverlessly on AWS Lambda with API Gateway and DynamoDB. Async job handling allows scalable recipe generation, with polling support and status tracking. This project highlights practical LLM integration, semantic retrieval, and serverless architecture for real-world utility.
+      `,
+      github: "https://github.com/dswho2/rag-recipe-finder",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "OpenAI", "LangChain", "Pinecone", "AWS Lambda", "DynamoDB", "S3", "CloudFront"],
+      image: rag_recipe_finder
+    },
     {
       title: "Diabetic Retinopathy Model",
       description: `
