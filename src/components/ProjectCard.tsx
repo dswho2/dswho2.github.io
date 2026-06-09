@@ -62,11 +62,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
 
           {/* Description */}
-          <div className="text-gray-300 mb-4 text-sm leading-relaxed">
-            {description.split('\n').map((line, index) => (
-              <p key={index}>{line}</p>
-            ))}
-          </div>
+          <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+            {description.replace(/\s+/g, ' ').trim()}
+          </p>
 
           {/* Technologies */}
           <div className="flex flex-wrap gap-2">

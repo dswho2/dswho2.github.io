@@ -12,10 +12,25 @@ import sudoku_webapp from '../images/sudoku-webapp-thumbnail.png';
 import ai_todo_list from '../images/AITodoList.png';
 import rag_recipe_finder from '../images/RAG_Recipe_Finder.png';
 import cards_optimizer from '../images/cards-optimizer.png'
+import wheres_my_money from '../images/wheres-my-money.png';
 
 const Projects = () => {
   // Project data with title, description, star count, and technologies used
   const projects = [
+    {
+      title: "Where's My Money",
+      description: `
+        A full-stack personal finance platform that connects directly to bank accounts via the Teller API 
+        to automatically import, categorize, and analyze transactions. Features a merchant rule inference 
+        engine that learns categorization patterns during review and retroactively applies them to the queue, 
+        PostgreSQL trigram similarity search, a Recharts-powered spending dashboard with interactive drill-down, 
+        and a cron-based sync system that reconciles multi-enrollment bank data daily. Ships with a fully 
+        seeded demo mode using realistic synthetic data across multiple institutions.
+      `,
+      github: "https://github.com/dswho2/where-did-my-money-go",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Django", "PostgreSQL", "Teller API", "Recharts", "Vercel", "Neon"],
+      image: wheres_my_money
+    },
     {
       title: "RAG-Based Recipe Generator",
       description: `
@@ -32,17 +47,17 @@ const Projects = () => {
     },
     {
       title: "Card Rewards Optimizer",
-        description: `
-          Full-stack platform with purchase categorization and recommendation engine. Recommends cards 
-          to use for purchases to maximize credit card rewards. Features portfolio analysis that identifies reward gaps and suggests new cards to complete
-           coverage across spending categories. Built with Next.js 15 and Express.js, using PostgreSQL for complex reward data modeling and JWT 
-           authentication. Implements drag-and-drop card reordering with dnd-kit, Zustand for state management, and Tailwind CSS v4. Backend 
-           handles intelligent categorization logic and portfolio gap analysis through optimized database 
-           queries. Deployed as Vercel serverless functions.
-        `,
-        github: "https://github.com/dswho2/card-rewards-optimizer",
-        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Express.js", "PostgreSQL", "Vercel", "Pinecone"],
-        image: cards_optimizer
+      description: `
+        Full-stack platform with purchase categorization and recommendation engine. Recommends cards 
+        to use for purchases to maximize credit card rewards. Features portfolio analysis that identifies reward gaps and suggests new cards to complete
+          coverage across spending categories. Built with Next.js 15 and Express.js, using PostgreSQL for complex reward data modeling and JWT 
+          authentication. Implements drag-and-drop card reordering with dnd-kit, Zustand for state management, and Tailwind CSS v4. Backend 
+          handles intelligent categorization logic and portfolio gap analysis through optimized database 
+          queries. Deployed as Vercel serverless functions.
+      `,
+      github: "https://github.com/dswho2/card-rewards-optimizer",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Express.js", "PostgreSQL", "Vercel", "Pinecone"],
+      image: cards_optimizer
     },
     {
       title: "Diabetic Retinopathy Model",

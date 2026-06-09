@@ -5,7 +5,14 @@ import ExperienceCard from '../components/ExperienceCard';
 const Experience = () => {
   const experiences = [
     {
-      dateRange: "Jun. 2024 — PRESENT",
+      dateRange: "Feb. 2026 — Present",
+      title: "Backend Engineer",
+      company: "Avoma",
+      description: "Built a file attachment system for an AI chat product end-to-end, covering upload validation, S3 storage, token budget enforcement across full conversation threads, and Anthropic API content block assembly for PDFs, images, and plain text. Redesigned an LLM email generation pipeline from prompt-only to a slot-mapping architecture where the model fills numbered placeholders and deterministic post-processing handles final string assembly, making output fully predictable regardless of model behavior. Shipped 5+ LLM agent tool integrations surfacing CRM data, playlists, and email context in natural language responses. Delivered backend infrastructure across billing, coaching analytics, and email template systems in a Django/PostgreSQL codebase.",
+      skills: ["Python", "Django", "PostgreSQL", "AWS S3", "Celery", "Anthropic Claude API"]
+    },
+    {
+      dateRange: "Jun. 2024 — Feb. 2026",
       title: "R&D Software Engineer",
       company: "Holor Technology, Inc.",
       description: "Developed a Python-based testing framework for electromagnetic simulation software in C++ and Python, automating validation and ensuring accuracy within a 5% margin of error while reducing benchmark time by 15%. Integrated command-line automation for running benchmarks with various configurations, utilized Pandas for log analysis, and used pytest to organize and automate test cases. Designed a novel electromagnetic simulation method using the velocity gauge, optimizing runtime and accuracy. First author of 'Numerical Methods for Electromagnetic Simulation using Velocity Gauge', submitted to the 62nd DAC.",
